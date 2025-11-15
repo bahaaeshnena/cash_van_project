@@ -143,6 +143,81 @@ class S {
   String get login {
     return Intl.message('Login', name: 'login', desc: '', args: []);
   }
+
+  /// `Username`
+  String get username {
+    return Intl.message('Username', name: 'username', desc: '', args: []);
+  }
+
+  /// `Skip`
+  String get skip {
+    return Intl.message('Skip', name: 'skip', desc: '', args: []);
+  }
+
+  /// `Get Started`
+  String get getStarted {
+    return Intl.message('Get Started', name: 'getStarted', desc: '', args: []);
+  }
+
+  /// `Your entire tour in one screen`
+  String get onBoardingTitle1 {
+    return Intl.message(
+      'Your entire tour in one screen',
+      name: 'onBoardingTitle1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Organize your visits, see incoming customers, and track your collections step by step without paper or clutter.`
+  String get onBoardingSubtitle1 {
+    return Intl.message(
+      'Organize your visits, see incoming customers, and track your collections step by step without paper or clutter.',
+      name: 'onBoardingSubtitle1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Distribute, invoice, and complete your work in seconds.`
+  String get onBoardingTitle2 {
+    return Intl.message(
+      'Distribute, invoice, and complete your work in seconds.',
+      name: 'onBoardingTitle2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose the customer, add the materials, and get the invoice ready with prices, discounts, and inventory from the same app.`
+  String get onBoardingSubtitle2 {
+    return Intl.message(
+      'Choose the customer, add the materials, and get the invoice ready with prices, discounts, and inventory from the same app.',
+      name: 'onBoardingSubtitle2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `End of the day… clear numbers`
+  String get onBoardingTitle3 {
+    return Intl.message(
+      'End of the day… clear numbers',
+      name: 'onBoardingTitle3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `See your total sales, returns, and remaining vehicle inventory in a simple report that keeps you always in the loop.`
+  String get onBoardingSubtitle3 {
+    return Intl.message(
+      'See your total sales, returns, and remaining vehicle inventory in a simple report that keeps you always in the loop.',
+      name: 'onBoardingSubtitle3',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

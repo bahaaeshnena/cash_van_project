@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "emailIsRequired": MessageLookupByLibrary.simpleMessage(
       "البريد الإلكتروني مطلوب",
     ),
+    "getStarted": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
     "invalidEmailAddress": MessageLookupByLibrary.simpleMessage(
       "عنوان البريد الإلكتروني غير صالح",
     ),
@@ -41,9 +42,29 @@ class MessageLookup extends MessageLookupByLibrary {
       "لا تضيع وقتك بين الأوراق الورقية.",
     ),
     "loginWelcomeBack": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك"),
+    "onBoardingSubtitle1": MessageLookupByLibrary.simpleMessage(
+      "نظّم زياراتك، واعرف العملاء القادمين، وتابع تحصيلاتك خطوة بخطوة بدون أوراق أو فوضى.",
+    ),
+    "onBoardingSubtitle2": MessageLookupByLibrary.simpleMessage(
+      "اختر العميل، أضف المواد، وجهّز الفاتورة بأسعارها وخصوماتها ومخزونها من نفس التطبيق.",
+    ),
+    "onBoardingSubtitle3": MessageLookupByLibrary.simpleMessage(
+      "شاهد إجمالي مبيعاتك، ومرتجعاتك، ومخزون سيارتك المتبقي في تقرير بسيط يبقيك على اطلاع دائم.",
+    ),
+    "onBoardingTitle1": MessageLookupByLibrary.simpleMessage(
+      "جولتك كاملة في شاشة واحدة",
+    ),
+    "onBoardingTitle2": MessageLookupByLibrary.simpleMessage(
+      "وزّع، فوتر، وأنهِ عملك في ثوانٍ.",
+    ),
+    "onBoardingTitle3": MessageLookupByLibrary.simpleMessage(
+      "نهاية اليوم… أرقام واضحة",
+    ),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "passwordIsRequired": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور مطلوبة",
     ),
+    "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+    "username": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
   };
 }

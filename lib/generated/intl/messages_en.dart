@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "emailIsRequired": MessageLookupByLibrary.simpleMessage(
       "Email is required",
     ),
+    "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
     "invalidEmailAddress": MessageLookupByLibrary.simpleMessage(
       "Invalid email address",
     ),
@@ -41,9 +42,29 @@ class MessageLookup extends MessageLookupByLibrary {
       "Don\'t waste time browsing through papers.",
     ),
     "loginWelcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back"),
+    "onBoardingSubtitle1": MessageLookupByLibrary.simpleMessage(
+      "Organize your visits, see incoming customers, and track your collections step by step without paper or clutter.",
+    ),
+    "onBoardingSubtitle2": MessageLookupByLibrary.simpleMessage(
+      "Choose the customer, add the materials, and get the invoice ready with prices, discounts, and inventory from the same app.",
+    ),
+    "onBoardingSubtitle3": MessageLookupByLibrary.simpleMessage(
+      "See your total sales, returns, and remaining vehicle inventory in a simple report that keeps you always in the loop.",
+    ),
+    "onBoardingTitle1": MessageLookupByLibrary.simpleMessage(
+      "Your entire tour in one screen",
+    ),
+    "onBoardingTitle2": MessageLookupByLibrary.simpleMessage(
+      "Distribute, invoice, and complete your work in seconds.",
+    ),
+    "onBoardingTitle3": MessageLookupByLibrary.simpleMessage(
+      "End of the day… clear numbers",
+    ),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
     "passwordIsRequired": MessageLookupByLibrary.simpleMessage(
       "Password is required",
     ),
+    "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+    "username": MessageLookupByLibrary.simpleMessage("Username"),
   };
 }

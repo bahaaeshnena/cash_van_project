@@ -1,8 +1,8 @@
 import 'package:cach_van/core/utils/constants/ui/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
-class CustomEleevatedButton extends StatelessWidget {
-  const CustomEleevatedButton({
+class CustomElevatedButton extends StatelessWidget {
+  const CustomElevatedButton({
     super.key,
     required this.onPressed,
     required this.label,

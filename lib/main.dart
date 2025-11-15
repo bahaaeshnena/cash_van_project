@@ -1,11 +1,18 @@
+import 'package:cach_van/core/services/service_locator.dart';
+import 'package:cach_van/core/services/shared_prefs.dart';
+import 'package:cach_van/core/utils/constants/constants.dart';
 import 'package:cach_van/core/utils/constants/ui/app_theme.dart';
 import 'package:cach_van/core/common/helpers/on_generate_routes.dart';
 import 'package:cach_van/features/auth/presentation/login_view.dart';
+import 'package:cach_van/features/on_boarding/presentation/on_boarding_view.dart';
 import 'package:cach_van/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Prefs.init();
+  setupServiceLocator();
   runApp(const MyApp());
 }
 
@@ -28,7 +35,9 @@ class MyApp extends StatelessWidget {
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
       onGenerateRoute: onGenerateRoutes,
-      initialRoute: LoginView.routeName,
+      initialRoute: Prefs.getBool(kIsOnBoardingView) == true
+          ? LoginView.routeName
+          : OnBoardingView.routeName,
     );
   }
 }

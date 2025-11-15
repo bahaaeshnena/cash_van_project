@@ -69,11 +69,11 @@ class LoginViewBody extends StatelessWidget {
                                       child: Column(
                                         children: [
                                           CustomTextFormField(
-                                            label: S.of(context).email,
-                                            hint: 'your@email.com',
+                                            label: S.of(context).username,
+                                            hint: "Username",
                                             keyboardType: TextInputType.emailAddress,
                                             prefixIcon: SvgPicture.asset(
-                                              Assets.assetsImagesIconsEmail,
+                                              Assets.assetsImagesIconsUser,
                                               fit: BoxFit.scaleDown,
                                             ),
                                             validator: (value) => Validators.validateEmail(
@@ -84,10 +84,8 @@ class LoginViewBody extends StatelessWidget {
                                           const SizedBox(height: 20),
                                           const PasswordField(),
                                           SizedBox(height: 50),
-                                          CustomEleevatedButton(
-                                            onPressed: () {
-                                              // call login
-                                            },
+                                          CustomElevatedButton(
+                                            onPressed: () {},
                                             label: S.of(context).login,
                                           ),
                                         ],
