@@ -39,5 +39,11 @@
   "onBoardingTitle3": "نهاية اليوم… أرقام واضحة",
   "@onBoardingTitle3": {},
   "onBoardingSubtitle3": "شاهد إجمالي مبيعاتك، ومرتجعاتك، ومخزون سيارتك المتبقي في تقرير بسيط يبقيك على اطلاع دائم.",
-  "@onBoardingSubtitle3": {}
+  "@onBoardingSubtitle3": {},
+  "home": "الرئيسية",
+  "@home": {},
+  "profile": "الملف الشخصي",
+  "@profile": {},
+  "settings": "الإعدادات",
+  "@settings": {}
 }

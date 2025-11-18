@@ -8,6 +8,7 @@ import 'package:cach_van/core/utils/validations/validators.dart';
 import 'package:cach_van/features/auth/presentation/widgets/custom_elevated_button.dart';
 import 'package:cach_van/features/auth/presentation/widgets/header_login.dart';
 import 'package:cach_van/features/auth/presentation/widgets/section_description_login.dart';
+import 'package:cach_van/features/home/presentation/home_view.dart';
 import 'package:cach_van/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -85,7 +86,13 @@ class LoginViewBody extends StatelessWidget {
                                           const PasswordField(),
                                           SizedBox(height: 50),
                                           CustomElevatedButton(
-                                            onPressed: () {},
+                                            onPressed: () {
+                                              Navigator.pushNamedAndRemoveUntil(
+                                                context,
+                                                HomeView.routeName,
+                                                (route) => false,
+                                              );
+                                            },
                                             label: S.of(context).login,
                                           ),
                                         ],

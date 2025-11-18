@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "البريد الإلكتروني مطلوب",
     ),
     "getStarted": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
+    "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
     "invalidEmailAddress": MessageLookupByLibrary.simpleMessage(
       "عنوان البريد الإلكتروني غير صالح",
     ),
@@ -64,6 +65,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwordIsRequired": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور مطلوبة",
     ),
+    "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+    "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
     "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
     "username": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
   };

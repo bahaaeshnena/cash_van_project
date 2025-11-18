@@ -39,5 +39,11 @@
   "onBoardingTitle3": "End of the day… clear numbers",
   "@onBoardingTitle3": {},
   "onBoardingSubtitle3": "See your total sales, returns, and remaining vehicle inventory in a simple report that keeps you always in the loop.",
-  "@onBoardingSubtitle3": {}
+  "@onBoardingSubtitle3": {},
+  "home": "Home",
+  "@home": {},
+  "profile": "Profile",
+  "@profile": {},
+  "settings": "Settings",
+  "@settings": {}
 }

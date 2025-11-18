@@ -1,4 +1,7 @@
+import 'package:cach_van/core/services/shared_prefs.dart';
+import 'package:cach_van/core/utils/constants/constants.dart';
 import 'package:cach_van/core/utils/helpers/device_utility.dart';
+import 'package:cach_van/features/auth/presentation/login_view.dart';
 import 'package:cach_van/features/auth/presentation/widgets/custom_elevated_button.dart';
 import 'package:cach_van/features/on_boarding/presentation/widgets/dots_indicator.dart';
 import 'package:cach_van/features/on_boarding/presentation/widgets/on_boarding_page_view.dart';
@@ -68,7 +71,13 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                   padding: EdgeInsets.symmetric(
                     horizontal: DeviceUtility.getScreenWidth(context) * 0.3,
                   ),
-                  child: CustomElevatedButton(onPressed: () {}, label: S.of(context).getStarted),
+                  child: CustomElevatedButton(
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, LoginView.routeName);
+                      Prefs.setBool(kIsOnBoardingView, true);
+                    },
+                    label: S.of(context).getStarted,
+                  ),
                 ),
               ),
             ],

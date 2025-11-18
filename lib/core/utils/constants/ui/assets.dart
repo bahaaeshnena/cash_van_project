@@ -14,9 +14,33 @@ class Assets {
   /// assets/images/icons/eye-closed.svg
   static const String assetsImagesIconsEyeClosed = "assets/images/icons/eye-closed.svg";
 
+  /// Assets for assetsImagesIconsHome
+  /// assets/images/icons/home.svg
+  static const String assetsImagesIconsHome = "assets/images/icons/home.svg";
+
+  /// Assets for assetsImagesIconsHomeOutline
+  /// assets/images/icons/home_outline.svg
+  static const String assetsImagesIconsHomeOutline = "assets/images/icons/home_outline.svg";
+
   /// Assets for assetsImagesIconsPassword
   /// assets/images/icons/password.svg
   static const String assetsImagesIconsPassword = "assets/images/icons/password.svg";
+
+  /// Assets for assetsImagesIconsProfile
+  /// assets/images/icons/profile.svg
+  static const String assetsImagesIconsProfile = "assets/images/icons/profile.svg";
+
+  /// Assets for assetsImagesIconsProfileOutline
+  /// assets/images/icons/profile_outline.svg
+  static const String assetsImagesIconsProfileOutline = "assets/images/icons/profile_outline.svg";
+
+  /// Assets for assetsImagesIconsSetting
+  /// assets/images/icons/setting.svg
+  static const String assetsImagesIconsSetting = "assets/images/icons/setting.svg";
+
+  /// Assets for assetsImagesIconsSettingOutline
+  /// assets/images/icons/setting_outline.svg
+  static const String assetsImagesIconsSettingOutline = "assets/images/icons/setting_outline.svg";
 
   /// Assets for assetsImagesIconsUser
   /// assets/images/icons/user.svg

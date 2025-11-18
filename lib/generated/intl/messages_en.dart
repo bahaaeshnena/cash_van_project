@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Email is required",
     ),
     "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
+    "home": MessageLookupByLibrary.simpleMessage("Home"),
     "invalidEmailAddress": MessageLookupByLibrary.simpleMessage(
       "Invalid email address",
     ),
@@ -64,6 +65,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwordIsRequired": MessageLookupByLibrary.simpleMessage(
       "Password is required",
     ),
+    "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+    "settings": MessageLookupByLibrary.simpleMessage("Settings"),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
     "username": MessageLookupByLibrary.simpleMessage("Username"),
   };
