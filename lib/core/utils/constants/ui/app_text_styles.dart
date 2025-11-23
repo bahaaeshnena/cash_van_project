@@ -1,5 +1,5 @@
 import 'package:cach_van/core/utils/constants/ui/app_colors.dart';
-import 'package:cach_van/core/utils/helpers/is_arabic.dart';
+import 'package:cach_van/core/common/helpers/is_arabic.dart';
 import 'package:cach_van/core/common/helpers/is_dark.dart';
 import 'package:flutter/material.dart';
 

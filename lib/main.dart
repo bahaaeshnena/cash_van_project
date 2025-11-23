@@ -4,6 +4,7 @@ import 'package:cach_van/core/utils/constants/constants.dart';
 import 'package:cach_van/core/utils/constants/ui/app_theme.dart';
 import 'package:cach_van/core/common/helpers/on_generate_routes.dart';
 import 'package:cach_van/features/auth/presentation/login_view.dart';
+import 'package:cach_van/features/home/presentation/home_view.dart';
 import 'package:cach_van/features/on_boarding/presentation/on_boarding_view.dart';
 import 'package:cach_van/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       onGenerateRoute: onGenerateRoutes,
       initialRoute: Prefs.getBool(kIsOnBoardingView) == true
-          ? LoginView.routeName
+          ? (Prefs.getBool(kIsLoggedIn) == true ? HomeView.routeName : LoginView.routeName)
           : OnBoardingView.routeName,
     );
   }

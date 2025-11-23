@@ -41,8 +41,15 @@ class ServerFailure extends Failure {
 
   factory ServerFailure.fromResponce(int statusCode, dynamic response) {
     if (statusCode == 400 || statusCode == 401 || statusCode == 403) {
-      final message = response['error']?['message'] ?? 'Unknown error occurred';
-      return ServerFailure(message);
+      String? message;
+
+      if (response is Map<String, dynamic>) {
+        message = response['message']?.toString();
+
+        message ??= response['error']?['message']?.toString();
+      }
+
+      return ServerFailure(message ?? 'Unknown error occurred');
     } else if (statusCode == 404) {
       return ServerFailure(
         'Your request was not found, Please try again later',
@@ -53,6 +60,7 @@ class ServerFailure extends Failure {
       return ServerFailure('Oops, there was an error. Please try again later');
     }
   }
+
   @override
   String toString() {
     return 'ServerFailure: $message';

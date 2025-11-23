@@ -1,4 +1,4 @@
-import 'package:cach_van/core/utils/helpers/device_utility.dart';
+import 'package:cach_van/core/common/helpers/device_utility.dart';
 import 'package:cach_van/features/home/domain/bottom_navigation_bar_entity.dart';
 import 'package:cach_van/features/home/presentation/widgets/navigation_bar_item.dart';
 import 'package:flutter/material.dart';

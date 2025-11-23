@@ -1,6 +1,6 @@
 import 'package:cach_van/core/services/shared_prefs.dart';
 import 'package:cach_van/core/utils/constants/constants.dart';
-import 'package:cach_van/core/utils/helpers/device_utility.dart';
+import 'package:cach_van/core/common/helpers/device_utility.dart';
 import 'package:cach_van/features/auth/presentation/login_view.dart';
 import 'package:cach_van/features/auth/presentation/widgets/custom_elevated_button.dart';
 import 'package:cach_van/features/on_boarding/presentation/widgets/dots_indicator.dart';
