@@ -1,7 +1,11 @@
 // ignore_for_file: prefer_single_quotes
 class Assets {
   Assets._();
-  
+
+  /// Assets for assetsImagesIconsDarkMode
+  /// assets/images/icons/dark_mode.svg
+  static const String assetsImagesIconsDarkMode = "assets/images/icons/dark_mode.svg";
+
   /// Assets for assetsImagesIconsEmail
   /// assets/images/icons/email.svg
   static const String assetsImagesIconsEmail = "assets/images/icons/email.svg";
@@ -21,6 +25,26 @@ class Assets {
   /// Assets for assetsImagesIconsHomeOutline
   /// assets/images/icons/home_outline.svg
   static const String assetsImagesIconsHomeOutline = "assets/images/icons/home_outline.svg";
+
+  /// Assets for assetsImagesIconsLanguageSquare
+  /// assets/images/icons/language_square.svg
+  static const String assetsImagesIconsLanguageSquare = "assets/images/icons/language_square.svg";
+
+  /// Assets for assetsImagesIconsLightMode
+  /// assets/images/icons/light_mode.svg
+  static const String assetsImagesIconsLightMode = "assets/images/icons/light_mode.svg";
+
+  /// Assets for assetsImagesIconsLogout
+  /// assets/images/icons/logout.svg
+  static const String assetsImagesIconsLogout = "assets/images/icons/logout.svg";
+
+  /// Assets for assetsImagesIconsMenu
+  /// assets/images/icons/menu.svg
+  static const String assetsImagesIconsMenu = "assets/images/icons/menu.svg";
+
+  /// Assets for assetsImagesIconsNotification
+  /// assets/images/icons/notification.svg
+  static const String assetsImagesIconsNotification = "assets/images/icons/notification.svg";
 
   /// Assets for assetsImagesIconsPassword
   /// assets/images/icons/password.svg
@@ -62,4 +86,3 @@ class Assets {
   /// assets/images/onBoarding_image3.png
   static const String assetsImagesOnBoardingImage3 = "assets/images/onBoarding_image3.png";
 }
-
