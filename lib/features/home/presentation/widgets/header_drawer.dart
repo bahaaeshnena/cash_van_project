@@ -4,7 +4,10 @@ import 'package:cach_van/core/common/helpers/get_user.dart';
 import 'package:cach_van/core/common/helpers/is_arabic.dart';
 import 'package:cach_van/core/utils/constants/ui/app_colors.dart';
 import 'package:cach_van/core/utils/constants/ui/app_text_styles.dart';
+import 'package:cach_van/core/utils/constants/ui/assets.dart';
+import 'package:cach_van/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class HeaderDrawer extends StatelessWidget {
   const HeaderDrawer({
@@ -113,8 +116,9 @@ class HeaderDrawer extends StatelessWidget {
                           ),
                           const SizedBox(width: 6),
                           Text(
-                            'User Type:',
+                            '${S.of(context).userType}:',
                             style: AppTextStyles.body(context).copyWith(
+                              fontWeight: FontWeight.w600,
                               color: Colors.white,
                               fontSize: 11,
                             ),
@@ -142,15 +146,20 @@ class HeaderDrawer extends StatelessWidget {
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          const Icon(
-                            Icons.badge_outlined,
-                            size: 14,
-                            color: Colors.white,
+                          SvgPicture.asset(
+                            Assets.assetsImagesIconsEmail,
+                            width: 14,
+                            height: 14,
+                            colorFilter: const ColorFilter.mode(
+                              Colors.white,
+                              BlendMode.srcIn,
+                            ),
                           ),
                           const SizedBox(width: 6),
                           Text(
-                            'Email:',
+                            '${S.of(context).email}:',
                             style: AppTextStyles.body(context).copyWith(
+                              fontWeight: FontWeight.w600,
                               color: Colors.white,
                               fontSize: 11,
                             ),

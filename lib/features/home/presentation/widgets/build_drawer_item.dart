@@ -1,3 +1,4 @@
+import 'package:cach_van/core/common/helpers/is_dark.dart';
 import 'package:cach_van/core/utils/constants/ui/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -18,6 +19,7 @@ class BuildDrawerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = isDarkFun(context);
     return Card(
       margin: const EdgeInsets.symmetric(vertical: 4),
       elevation: 0,
@@ -25,7 +27,15 @@ class BuildDrawerItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(14),
       ),
       child: ListTile(
-        leading: SvgPicture.asset(iconPath, width: 24, height: 24),
+        leading: SvgPicture.asset(
+          iconPath,
+          width: 24,
+          height: 24,
+          colorFilter: ColorFilter.mode(
+            isDark ? Colors.white : Colors.black,
+            BlendMode.srcIn,
+          ),
+        ),
         title: Text(
           title,
           style: AppTextStyles.body(context).copyWith(

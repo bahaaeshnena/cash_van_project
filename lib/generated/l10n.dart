@@ -224,14 +224,114 @@ class S {
     return Intl.message('Home', name: 'home', desc: '', args: []);
   }
 
+  /// `Logout`
+  String get logout {
+    return Intl.message('Logout', name: 'logout', desc: '', args: []);
+  }
+
+  /// `Cash Van`
+  String get appBarTitle {
+    return Intl.message('Cash Van', name: 'appBarTitle', desc: '', args: []);
+  }
+
+  /// `Daily operations overview`
+  String get appBarSubtitle {
+    return Intl.message(
+      'Daily operations overview',
+      name: 'appBarSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Account`
+  String get account {
+    return Intl.message('Account', name: 'account', desc: '', args: []);
+  }
+
   /// `Profile`
   String get profile {
     return Intl.message('Profile', name: 'profile', desc: '', args: []);
   }
 
-  /// `Settings`
+  /// `Personal information`
+  String get profileTitle {
+    return Intl.message(
+      'Personal information',
+      name: 'profileTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Preferences`
+  String get preferences {
+    return Intl.message('Preferences', name: 'preferences', desc: '', args: []);
+  }
+
+  /// `System Settings`
   String get settings {
-    return Intl.message('Settings', name: 'settings', desc: '', args: []);
+    return Intl.message(
+      'System Settings',
+      name: 'settings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Application configuration`
+  String get settingsTitle {
+    return Intl.message(
+      'Application configuration',
+      name: 'settingsTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Language`
+  String get changeLanguage {
+    return Intl.message(
+      'Change Language',
+      name: 'changeLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Switch app language`
+  String get changeLanguageTitle {
+    return Intl.message(
+      'Switch app language',
+      name: 'changeLanguageTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Theme`
+  String get changeTheme {
+    return Intl.message(
+      'Change Theme',
+      name: 'changeTheme',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Light / Dark mode`
+  String get changeThemeTitle {
+    return Intl.message(
+      'Light / Dark mode',
+      name: 'changeThemeTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User Type`
+  String get userType {
+    return Intl.message('User Type', name: 'userType', desc: '', args: []);
   }
 }
 

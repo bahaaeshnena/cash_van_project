@@ -1,14 +1,21 @@
 import 'package:cach_van/core/utils/constants/ui/app_text_styles.dart';
+import 'package:cach_van/generated/l10n.dart';
+import 'package:cach_van/main.dart';
 import 'package:flutter/material.dart';
 
-class ChangeThemeCard extends StatelessWidget {
+class ChangeThemeCard extends StatefulWidget {
   const ChangeThemeCard({
     super.key,
   });
 
   @override
+  State<ChangeThemeCard> createState() => _ChangeThemeCardState();
+}
+
+class _ChangeThemeCardState extends State<ChangeThemeCard> {
+  @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.light;
+    final isDark = MyApp.of(context).themeMode == ThemeMode.dark;
 
     return Card(
       margin: const EdgeInsets.symmetric(vertical: 4),
@@ -22,13 +29,13 @@ class ChangeThemeCard extends StatelessWidget {
           size: 28,
         ),
         title: Text(
-          'Change Theme',
+          S.of(context).changeTheme,
           style: AppTextStyles.body(context).copyWith(
             fontWeight: FontWeight.w600,
           ),
         ),
         subtitle: Text(
-          'Light / Dark mode',
+          S.of(context).changeThemeTitle,
           style: AppTextStyles.body(context).copyWith(
             color: Colors.grey.shade600,
           ),
@@ -39,7 +46,9 @@ class ChangeThemeCard extends StatelessWidget {
         ),
         trailing: Switch.adaptive(
           value: isDark,
-          onChanged: (value) {},
+          onChanged: (value) {
+            MyApp.of(context).changeTheme(value);
+          },
         ),
       ),
     );

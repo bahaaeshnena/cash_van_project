@@ -22,7 +22,7 @@ class AppTextStyles {
     Color? color,
     double? height,
   }) {
-    final darkMode = isDark(context);
+    final darkMode = isDarkFun(context);
 
     final Color effectiveColor =
         color ?? (darkMode ? AppColors.darkSubTitleText : AppColors.lightSubTitleText);
@@ -42,7 +42,7 @@ class AppTextStyles {
     FontWeight fontWeight = FontWeight.w800,
     Color? color,
   }) {
-    final darkMode = isDark(context);
+    final darkMode = isDarkFun(context);
     final Color effectiveColor =
         color ?? (darkMode ? AppColors.darkTitleText : AppColors.lightTitleText);
 
@@ -60,7 +60,7 @@ class AppTextStyles {
     FontWeight fontWeight = FontWeight.w400,
     Color? color,
   }) {
-    final darkMode = isDark(context);
+    final darkMode = isDarkFun(context);
     final Color effectiveColor =
         color ?? (darkMode ? AppColors.darkLabelText : AppColors.lightLabelText);
 

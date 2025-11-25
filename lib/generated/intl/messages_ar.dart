@@ -22,12 +22,25 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "account": MessageLookupByLibrary.simpleMessage("حساب"),
+    "appBarSubtitle": MessageLookupByLibrary.simpleMessage(
+      "مراقبة العمليات اليومية",
+    ),
+    "appBarTitle": MessageLookupByLibrary.simpleMessage("متابعة السيارات"),
+    "changeLanguage": MessageLookupByLibrary.simpleMessage("تغيير اللغة"),
+    "changeLanguageTitle": MessageLookupByLibrary.simpleMessage(
+      "تغيير لغة التطبيق",
+    ),
+    "changeTheme": MessageLookupByLibrary.simpleMessage("تغيير الثيم"),
+    "changeThemeTitle": MessageLookupByLibrary.simpleMessage(
+      "الوضع الداكن / الفاتح",
+    ),
     "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
     "emailIsRequired": MessageLookupByLibrary.simpleMessage(
       "البريد الإلكتروني مطلوب",
     ),
     "getStarted": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
-    "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+    "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
     "invalidEmailAddress": MessageLookupByLibrary.simpleMessage(
       "عنوان البريد الإلكتروني غير صالح",
     ),
@@ -43,6 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "لا تضيع وقتك بين الأوراق الورقية.",
     ),
     "loginWelcomeBack": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك"),
+    "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
     "onBoardingSubtitle1": MessageLookupByLibrary.simpleMessage(
       "نظّم زياراتك، واعرف العملاء القادمين، وتابع تحصيلاتك خطوة بخطوة بدون أوراق أو فوضى.",
     ),
@@ -65,9 +79,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwordIsRequired": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور مطلوبة",
     ),
+    "preferences": MessageLookupByLibrary.simpleMessage("التفضيلات"),
     "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
-    "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
+    "profileTitle": MessageLookupByLibrary.simpleMessage("معلومات شخصية"),
+    "settings": MessageLookupByLibrary.simpleMessage("اعدادات النظام"),
+    "settingsTitle": MessageLookupByLibrary.simpleMessage("تكوين التطبيق"),
     "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+    "userType": MessageLookupByLibrary.simpleMessage("نوع المستخدم"),
     "username": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
   };
 }

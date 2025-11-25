@@ -1,3 +1,4 @@
+import 'package:cach_van/core/common/helpers/is_dark.dart';
 import 'package:cach_van/core/common/widgets/custom_text_form_field.dart';
 import 'package:cach_van/core/utils/constants/ui/assets.dart';
 import 'package:cach_van/core/utils/validations/validators.dart';
@@ -27,8 +28,8 @@ class _PasswordFieldState extends State<PasswordField> {
       prefixIcon: SvgPicture.asset(
         Assets.assetsImagesIconsPassword,
         fit: BoxFit.scaleDown,
-        colorFilter: const ColorFilter.mode(
-          Colors.black,
+        colorFilter: ColorFilter.mode(
+          isDarkFun(context) ? Colors.white : Colors.black,
           BlendMode.srcIn,
         ),
       ),
@@ -55,8 +56,8 @@ class _PasswordFieldState extends State<PasswordField> {
             isPassword ? Assets.assetsImagesIconsEyeClosed : Assets.assetsImagesIconsEye,
             key: ValueKey<bool>(isPassword), // مهم عشان AnimatedSwitcher يفرّق بينهم
             fit: BoxFit.scaleDown,
-            colorFilter: const ColorFilter.mode(
-              Colors.black,
+            colorFilter: ColorFilter.mode(
+              isDarkFun(context) ? Colors.white : Colors.black,
               BlendMode.srcIn,
             ),
           ),

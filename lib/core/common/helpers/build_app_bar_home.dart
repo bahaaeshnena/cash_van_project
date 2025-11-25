@@ -1,7 +1,11 @@
 // ignore_for_file: deprecated_member_use
+import 'package:cach_van/core/common/helpers/is_arabic.dart';
 import 'package:cach_van/core/utils/constants/ui/app_colors.dart';
 import 'package:cach_van/core/utils/constants/ui/app_text_styles.dart';
+import 'package:cach_van/core/utils/constants/ui/assets.dart';
+import 'package:cach_van/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 PreferredSizeWidget buildAppBar(BuildContext context) {
   return AppBar(
@@ -37,7 +41,8 @@ PreferredSizeWidget buildAppBar(BuildContext context) {
     leading: Builder(
       builder: (context) => Padding(
         padding: EdgeInsets.only(
-          left: 24,
+          left: isArabic() ? 0 : 24,
+          right: isArabic() ? 24 : 0,
         ),
         child: IconButton(
           iconSize: 34,
@@ -49,7 +54,8 @@ PreferredSizeWidget buildAppBar(BuildContext context) {
     titleSpacing: 0,
     title: Padding(
       padding: EdgeInsets.only(
-        right: 24,
+        left: isArabic() ? 0 : 24,
+        right: isArabic() ? 24 : 0,
       ),
       child: Row(
         children: [
@@ -73,7 +79,7 @@ PreferredSizeWidget buildAppBar(BuildContext context) {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Cash Van',
+                S.of(context).appBarTitle,
                 style: AppTextStyles.title(context).copyWith(
                   color: Colors.white,
                   fontSize: 24,
@@ -81,7 +87,7 @@ PreferredSizeWidget buildAppBar(BuildContext context) {
               ),
               const SizedBox(height: 4),
               Text(
-                'Daily operations overview',
+                S.of(context).appBarSubtitle,
                 style: AppTextStyles.body(context).copyWith(
                   color: Colors.white.withOpacity(0.85),
                   fontSize: 14,
@@ -93,31 +99,24 @@ PreferredSizeWidget buildAppBar(BuildContext context) {
       ),
     ),
     actions: [
-      Stack(
-        alignment: Alignment.topRight,
-        children: [
-          IconButton(
-            icon: const Icon(Icons.notifications_none_rounded, color: Colors.white),
-            iconSize: 28,
-            onPressed: () {},
-          ),
-          //    SvgPicture.asset(
-          //   Assets.assetsImagesIconsNotification,
-          //   fit: BoxFit.scaleDown,
-          // ),
-          Positioned(
-            right: 10,
-            top: 10,
-            child: Container(
-              height: 10,
-              width: 10,
-              decoration: BoxDecoration(
-                color: Colors.redAccent,
-                borderRadius: BorderRadius.circular(8),
-              ),
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+        child: GestureDetector(
+          onTap: () {},
+          child: Container(
+            padding: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.white.withOpacity(0.12),
+            ),
+            child: SvgPicture.asset(
+              Assets.assetsImagesIconsNotification,
+              width: 30,
+              height: 30,
+              colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
             ),
           ),
-        ],
+        ),
       ),
     ],
   );

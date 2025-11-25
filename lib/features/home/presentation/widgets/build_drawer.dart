@@ -5,7 +5,9 @@ import 'package:cach_van/features/home/presentation/widgets/build_drawer_item.da
 import 'package:cach_van/features/home/presentation/widgets/build_section_title.dart';
 import 'package:cach_van/features/home/presentation/widgets/change_theme_card.dart';
 import 'package:cach_van/features/home/presentation/widgets/header_drawer.dart';
-import 'package:cach_van/features/home/presentation/widgets/log_out_section.dart';
+import 'package:cach_van/features/home/presentation/widgets/button_log_out.dart';
+import 'package:cach_van/features/home/presentation/widgets/language_bottom_sheet.dart';
+import 'package:cach_van/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class BuildDrawer extends StatelessWidget {
@@ -29,38 +31,42 @@ class BuildDrawer extends StatelessWidget {
                 ),
                 children: [
                   const SizedBox(height: 8),
-                  const BuildSectionTitle(title: 'Account'),
+                  BuildSectionTitle(title: S.of(context).account),
                   BuildDrawerItem(
                     iconPath: Assets.assetsImagesIconsUser,
-                    title: 'Profile',
-                    subtitle: 'Personal information',
+                    title: S.of(context).profile,
+                    subtitle: S.of(context).profileTitle,
                     onTap: () {
                       Navigator.pop(context);
                     },
                   ),
                   const SizedBox(height: 12),
-                  const BuildSectionTitle(title: 'Preferences'),
+                  BuildSectionTitle(title: S.of(context).preferences),
                   BuildDrawerItem(
                     iconPath: Assets.assetsImagesIconsSettingOutline,
-                    title: 'System Settings',
-                    subtitle: 'Application configuration',
+                    title: S.of(context).settings,
+                    subtitle: S.of(context).settingsTitle,
                     onTap: () {
                       Navigator.pop(context);
                     },
                   ),
                   BuildDrawerItem(
                     iconPath: Assets.assetsImagesIconsLanguageSquare,
-                    title: 'Change Language',
-                    subtitle: 'Switch app language',
-                    onTap: () {
+                    title: S.of(context).changeLanguage,
+                    subtitle: S.of(context).changeLanguageTitle,
+                    onTap: () async {
                       Navigator.pop(context);
+
+                      await Future.delayed(const Duration(milliseconds: 150));
+
+                      showLanguageBottomSheet(context);
                     },
                   ),
                   ChangeThemeCard(),
                   const SizedBox(height: 16),
                   const Divider(),
-                  const SizedBox(height: 8),
-                  LogOutSection(),
+                  const SizedBox(height: 16),
+                  ButtonLogOut(),
                   const SizedBox(height: 8),
                 ],
               ),

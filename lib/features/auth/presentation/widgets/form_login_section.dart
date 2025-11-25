@@ -1,3 +1,4 @@
+import 'package:cach_van/core/common/helpers/is_dark.dart';
 import 'package:cach_van/core/common/widgets/custom_text_form_field.dart';
 import 'package:cach_van/core/common/widgets/password_field.dart';
 import 'package:cach_van/core/utils/constants/ui/assets.dart';
@@ -37,6 +38,10 @@ class _FormLoginSectionState extends State<FormLoginSection> {
               prefixIcon: SvgPicture.asset(
                 Assets.assetsImagesIconsUser,
                 fit: BoxFit.scaleDown,
+                colorFilter: ColorFilter.mode(
+                  isDarkFun(context) ? Colors.white : Colors.black,
+                  BlendMode.srcIn,
+                ),
               ),
               validator: (value) => Validators.validateEmail(
                 value,

@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 import 'package:cach_van/core/common/helpers/device_utility.dart';
 import 'package:cach_van/core/common/helpers/is_arabic.dart';
+import 'package:cach_van/core/common/helpers/is_dark.dart';
 import 'package:cach_van/features/auth/presentation/widgets/form_login_section.dart';
 import 'package:cach_van/features/auth/presentation/widgets/header_login.dart';
 import 'package:cach_van/features/auth/presentation/widgets/section_description_login.dart';
@@ -26,7 +27,10 @@ class LoginViewBody extends StatelessWidget {
                   width: DeviceUtility.getScreenWidth(context) * 0.87,
                   height: DeviceUtility.getScreenHeight(context) * 0.82,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: isDarkFun(context)
+                        ? const Color(0xFF000000).withOpacity(0.70)
+                        : Colors.white,
+
                     borderRadius: const BorderRadius.all(
                       Radius.circular(32),
                     ),

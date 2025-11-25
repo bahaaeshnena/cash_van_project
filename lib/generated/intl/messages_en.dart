@@ -22,6 +22,19 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "account": MessageLookupByLibrary.simpleMessage("Account"),
+    "appBarSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Daily operations overview",
+    ),
+    "appBarTitle": MessageLookupByLibrary.simpleMessage("Cash Van"),
+    "changeLanguage": MessageLookupByLibrary.simpleMessage("Change Language"),
+    "changeLanguageTitle": MessageLookupByLibrary.simpleMessage(
+      "Switch app language",
+    ),
+    "changeTheme": MessageLookupByLibrary.simpleMessage("Change Theme"),
+    "changeThemeTitle": MessageLookupByLibrary.simpleMessage(
+      "Light / Dark mode",
+    ),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
     "emailIsRequired": MessageLookupByLibrary.simpleMessage(
       "Email is required",
@@ -43,6 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Don\'t waste time browsing through papers.",
     ),
     "loginWelcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back"),
+    "logout": MessageLookupByLibrary.simpleMessage("Logout"),
     "onBoardingSubtitle1": MessageLookupByLibrary.simpleMessage(
       "Organize your visits, see incoming customers, and track your collections step by step without paper or clutter.",
     ),
@@ -65,9 +79,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwordIsRequired": MessageLookupByLibrary.simpleMessage(
       "Password is required",
     ),
+    "preferences": MessageLookupByLibrary.simpleMessage("Preferences"),
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),
-    "settings": MessageLookupByLibrary.simpleMessage("Settings"),
+    "profileTitle": MessageLookupByLibrary.simpleMessage(
+      "Personal information",
+    ),
+    "settings": MessageLookupByLibrary.simpleMessage("System Settings"),
+    "settingsTitle": MessageLookupByLibrary.simpleMessage(
+      "Application configuration",
+    ),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+    "userType": MessageLookupByLibrary.simpleMessage("User Type"),
     "username": MessageLookupByLibrary.simpleMessage("Username"),
   };
 }

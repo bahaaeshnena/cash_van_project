@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:cach_van/core/services/service_locator.dart';
 import 'package:cach_van/core/services/shared_prefs.dart';
 import 'package:cach_van/core/utils/constants/constants.dart';
@@ -17,14 +19,49 @@ void main() async {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  static _MyAppState of(BuildContext context) => context.findAncestorStateOfType<_MyAppState>()!;
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  late ThemeMode themeMode;
+  late Locale _locale;
+
+  Locale get locale => _locale;
+
+  @override
+  void initState() {
+    super.initState();
+
+    final isDark = Prefs.getBool(kIsDarkMode);
+    themeMode = isDark ? ThemeMode.dark : ThemeMode.light;
+
+    final code = (Prefs.getString(kAppLanguageCode));
+    _locale = Locale(code.isEmpty ? 'en' : code);
+  }
+
+  void changeTheme(bool isDark) {
+    setState(() {
+      themeMode = isDark ? ThemeMode.dark : ThemeMode.light;
+    });
+    Prefs.setBool(kIsDarkMode, isDark);
+  }
+
+  void changeLanguage(String code) {
+    setState(() => _locale = Locale(code));
+    Prefs.setString(kAppLanguageCode, code);
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      locale: const Locale('en'),
+      locale: locale,
       localizationsDelegates: [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -34,7 +71,7 @@ class MyApp extends StatelessWidget {
       supportedLocales: S.delegate.supportedLocales,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      themeMode: ThemeMode.system,
+      themeMode: themeMode,
       onGenerateRoute: onGenerateRoutes,
       initialRoute: Prefs.getBool(kIsOnBoardingView) == true
           ? (Prefs.getBool(kIsLoggedIn) == true ? HomeView.routeName : LoginView.routeName)

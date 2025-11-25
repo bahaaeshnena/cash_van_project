@@ -21,4 +21,6 @@ class Prefs {
   static int getInt(String key) => _instance.getInt(key) ?? 0;
 
   static Future<void> clear() async => await _instance.clear();
+
+  static Future<void> remove(String key) async => await _instance.remove(key);
 }
