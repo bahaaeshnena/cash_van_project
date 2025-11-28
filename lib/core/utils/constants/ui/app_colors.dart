@@ -23,4 +23,13 @@ class AppColors {
   static const Color darkSubTitleText = Color(0xFFCFD8DC);
   static const Color darkLabelText = Color(0xFF90A4AE);
   static const Color darkDividerText = Color(0xFF263238);
+
+  // Neon Colors
+  static const neonGreen = Color(0xFF22C55E);
+  static const neonCyan = Color(0xFF06B6D4);
+  static const neonPurple = Color(0xFF8B5CF6);
+  static const neonBlue = Color(0xFF3B82F6);
+  static const neonOrange = Color(0xFFF97316);
+  static const neonRed = Color(0xFFEF4444);
+  static const neonSky = Color(0xFF0EA5E9);
 }
