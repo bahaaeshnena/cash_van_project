@@ -1,5 +1,6 @@
 // ignore_for_file: deprecated_member_use
 import 'package:cach_van/core/common/helpers/is_arabic.dart';
+import 'package:cach_van/core/common/helpers/is_dark.dart';
 import 'package:cach_van/core/utils/constants/ui/app_colors.dart';
 import 'package:cach_van/core/utils/constants/ui/app_text_styles.dart';
 import 'package:cach_van/core/utils/constants/ui/assets.dart';
@@ -8,41 +9,62 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 PreferredSizeWidget buildAppBar(BuildContext context) {
+  final isDark = isDarkFun(context);
+
+  // Home-ish neon blend (calm)
+  final c1 = AppColors.primaryColor;
+  final c2 = Color.lerp(AppColors.primaryColor, AppColors.neonBlue, 0.35)!;
+  final c3 = AppColors.neonCyan.withOpacity(isDark ? 0.55 : 0.45);
+
   return AppBar(
-    elevation: 4,
+    elevation: 0,
     toolbarHeight: 90,
     backgroundColor: Colors.transparent,
     automaticallyImplyLeading: false,
     shape: const RoundedRectangleBorder(
-      borderRadius: BorderRadius.vertical(
-        bottom: Radius.circular(24),
-      ),
+      borderRadius: BorderRadius.vertical(bottom: Radius.circular(24)),
     ),
     flexibleSpace: Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [
-            AppColors.primaryColor,
-            AppColors.primaryColor.withOpacity(0.85),
-          ],
+          colors: [c1, c2, c3],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
         boxShadow: [
           BoxShadow(
-            blurRadius: 12,
-            offset: const Offset(0, 6),
-            color: Colors.black.withOpacity(0.15),
+            blurRadius: 16,
+            offset: const Offset(0, 8),
+            color: AppColors.neonCyan.withOpacity(isDark ? 0.16 : 0.12),
+          ),
+          BoxShadow(
+            blurRadius: 30,
+            offset: const Offset(0, 14),
+            color: Colors.black.withOpacity(isDark ? 0.22 : 0.10),
           ),
         ],
       ),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.vertical(bottom: Radius.circular(24)),
+          gradient: LinearGradient(
+            colors: [
+              Colors.white.withOpacity(isDark ? 0.10 : 0.14),
+              Colors.transparent,
+            ],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
+        ),
+      ),
     ),
+
     leadingWidth: 80,
     leading: Builder(
       builder: (context) => Padding(
         padding: EdgeInsets.only(
-          left: isArabic() ? 0 : 24,
-          right: isArabic() ? 24 : 0,
+          left: isArabicFun() ? 0 : 24,
+          right: isArabicFun() ? 24 : 0,
         ),
         child: IconButton(
           iconSize: 34,
@@ -51,11 +73,12 @@ PreferredSizeWidget buildAppBar(BuildContext context) {
         ),
       ),
     ),
+
     titleSpacing: 0,
     title: Padding(
       padding: EdgeInsets.only(
-        left: isArabic() ? 0 : 24,
-        right: isArabic() ? 24 : 0,
+        left: isArabicFun() ? 0 : 24,
+        right: isArabicFun() ? 24 : 0,
       ),
       child: Row(
         children: [
@@ -64,7 +87,10 @@ PreferredSizeWidget buildAppBar(BuildContext context) {
             width: 48,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
-              color: Colors.white.withOpacity(0.12),
+              color: Colors.white.withOpacity(isDark ? 0.12 : 0.14),
+              border: Border.all(
+                color: Colors.white.withOpacity(isDark ? 0.16 : 0.18),
+              ),
             ),
             child: const Icon(
               Icons.local_shipping_rounded,
@@ -73,7 +99,7 @@ PreferredSizeWidget buildAppBar(BuildContext context) {
             ),
           ),
           const SizedBox(width: 16),
-          // Title + Subtitle
+
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -98,6 +124,7 @@ PreferredSizeWidget buildAppBar(BuildContext context) {
         ],
       ),
     ),
+
     actions: [
       Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
@@ -107,7 +134,17 @@ PreferredSizeWidget buildAppBar(BuildContext context) {
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Colors.white.withOpacity(0.12),
+              color: Colors.white.withOpacity(isDark ? 0.12 : 0.14),
+              border: Border.all(
+                color: Colors.white.withOpacity(isDark ? 0.16 : 0.18),
+              ),
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 14,
+                  offset: const Offset(0, 6),
+                  color: AppColors.neonBlue.withOpacity(isDark ? 0.10 : 0.08),
+                ),
+              ],
             ),
             child: SvgPicture.asset(
               Assets.assetsImagesIconsNotification,

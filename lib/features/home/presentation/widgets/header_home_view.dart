@@ -2,25 +2,27 @@
 
 import 'dart:ui';
 
+import 'package:cach_van/core/common/helpers/is_dark.dart';
 import 'package:cach_van/core/utils/constants/ui/app_colors.dart';
 import 'package:cach_van/core/utils/constants/ui/app_text_styles.dart';
+import 'package:cach_van/core/utils/constants/ui/assets.dart';
+import 'package:cach_van/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class HeaderHomeView extends StatelessWidget {
   const HeaderHomeView({
     super.key,
-    required this.dark,
-    required this.neonBlue,
-    required this.neonCyan,
+    required this.color1,
+    required this.color2,
   });
 
-  final bool dark;
-
-  final Color neonBlue;
-  final Color neonCyan;
+  final Color color1;
+  final Color color2;
 
   @override
   Widget build(BuildContext context) {
+    final dark = isDarkFun(context);
     final glassFill = dark ? Colors.white.withOpacity(0.08) : Colors.white.withOpacity(0.78);
     final glassBorder = dark ? Colors.white.withOpacity(0.14) : Colors.black.withOpacity(0.06);
     final shadowColor = dark ? Colors.black.withOpacity(0.28) : Colors.black.withOpacity(0.10);
@@ -53,17 +55,21 @@ class HeaderHomeView extends StatelessWidget {
                   borderRadius: BorderRadius.circular(18),
                   gradient: LinearGradient(
                     colors: [
-                      neonBlue.withOpacity(0.95),
-                      neonCyan.withOpacity(0.85),
+                      color1.withOpacity(0.95),
+                      color2.withOpacity(0.85),
                     ],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),
                 ),
-                child: const Icon(
-                  Icons.local_shipping_rounded,
-                  color: Colors.white,
-                  size: 28,
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: SvgPicture.asset(
+                    Assets.assetsImagesIconsHome,
+                    color: Colors.white,
+                    height: 15,
+                    width: 15,
+                  ),
                 ),
               ),
               const SizedBox(width: 12),
@@ -72,7 +78,7 @@ class HeaderHomeView extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Cash Van',
+                      S.of(context).home,
                       style: AppTextStyles.title(
                         context,
                         fontSize: 20,
@@ -82,7 +88,7 @@ class HeaderHomeView extends StatelessWidget {
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      'جاهز ننجز شغل اليوم بسرعة وبأقل ضغط 😄',
+                      S.of(context).homeViewSubtitle,
                       style: AppTextStyles.body(
                         context,
                         fontSize: 13.5,
@@ -106,14 +112,8 @@ class HeaderHomeView extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Icon(
-                      Icons.calendar_today_rounded,
-                      size: 16,
-                      color: dark ? Colors.white.withOpacity(0.9) : AppColors.lightLabelText,
-                    ),
-                    const SizedBox(width: 7),
                     Text(
-                      'Today',
+                      "${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}",
                       style: AppTextStyles.label(
                         context,
                         fontSize: 13,

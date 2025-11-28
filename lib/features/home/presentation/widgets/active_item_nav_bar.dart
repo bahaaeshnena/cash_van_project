@@ -34,11 +34,11 @@ class ActiveItemNavBar extends StatelessWidget {
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
-        textDirection: isArabic() ? TextDirection.rtl : TextDirection.ltr,
+        textDirection: isArabicFun() ? TextDirection.rtl : TextDirection.ltr,
 
         children: [
           Padding(
-            padding: isArabic() ? EdgeInsets.only(top: 10) : EdgeInsets.all(5),
+            padding: isArabicFun() ? EdgeInsets.only(top: 10) : EdgeInsets.all(5),
             child: Text(
               name,
               textAlign: TextAlign.end,

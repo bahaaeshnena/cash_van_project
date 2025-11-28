@@ -1,3 +1,6 @@
+// ignore_for_file: deprecated_member_use
+
+import 'package:cach_van/core/utils/constants/ui/app_colors.dart';
 import 'package:cach_van/core/utils/constants/ui/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -30,55 +33,134 @@ class CustomElevatedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
 
-    final Color effectiveBg = backgroundColor ?? theme.colorScheme.primary;
     final Color effectiveTextColor = textColor ?? theme.colorScheme.onPrimary;
+
+    // لو المستخدم مرّر backgroundColor => نستخدمه كزر عادي بدون gradient
+    final Color solidBg = backgroundColor ?? theme.colorScheme.primary;
+
+    // default "home neon" gradient
+    final List<Color> gradientColors = [
+      AppColors.primaryColor,
+      Color.lerp(AppColors.primaryColor, AppColors.neonBlue, 0.35)!,
+      AppColors.neonCyan.withOpacity(isDark ? 0.70 : 0.55),
+    ];
 
     return SizedBox(
       width: width ?? double.infinity,
       height: height,
-      child: ElevatedButton(
-        onPressed: isLoading ? null : onPressed,
-        style: ElevatedButton.styleFrom(
-          backgroundColor: effectiveBg,
-          foregroundColor: effectiveTextColor,
-          elevation: elevation ?? 0,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(borderRadius),
-          ),
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(borderRadius),
+          gradient: backgroundColor != null
+              ? null
+              : LinearGradient(
+                  colors: gradientColors,
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+          color: backgroundColor != null ? solidBg : null,
+          boxShadow: [
+            // glow خفيف يلابق كروت الهوم
+            BoxShadow(
+              blurRadius: 18,
+              offset: const Offset(0, 10),
+              color: (backgroundColor != null ? solidBg : AppColors.neonCyan).withOpacity(
+                isDark ? 0.16 : 0.12,
+              ),
+            ),
+            BoxShadow(
+              blurRadius: 26,
+              offset: const Offset(0, 14),
+              color: Colors.black.withOpacity(isDark ? 0.18 : 0.10),
+            ),
+          ],
         ),
-        child: AnimatedSwitcher(
-          duration: const Duration(milliseconds: 200),
-          switchInCurve: Curves.easeOut,
-          switchOutCurve: Curves.easeIn,
-          child: isLoading
-              ? SizedBox(
-                  key: const ValueKey('loading'),
-                  width: 22,
-                  height: 22,
-                  child: CircularProgressIndicator(
-                    strokeWidth: 2,
-                    valueColor: AlwaysStoppedAnimation<Color>(effectiveTextColor),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(borderRadius),
+          child: ElevatedButton(
+            onPressed: isLoading ? null : onPressed,
+            style:
+                ElevatedButton.styleFrom(
+                  // خليها شفافة عشان الـ DecoratedBox هو اللي يرسم الخلفية
+                  backgroundColor: Colors.transparent,
+                  shadowColor: Colors.transparent,
+                  foregroundColor: effectiveTextColor,
+                  elevation: elevation ?? 0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(borderRadius),
                   ),
-                )
-              : Row(
-                  key: const ValueKey('content'),
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    if (icon != null) ...[
-                      icon!,
-                      const SizedBox(width: 8),
-                    ],
-                    Text(
-                      label,
-                      style: AppTextStyles.body(context).copyWith(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600,
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                ).copyWith(
+                  overlayColor: WidgetStatePropertyAll(
+                    Colors.white.withOpacity(isDark ? 0.10 : 0.14),
+                  ),
+                ),
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                IgnorePointer(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Colors.white.withOpacity(isDark ? 0.10 : 0.14),
+                          Colors.transparent,
+                        ],
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
                       ),
                     ),
-                  ],
+                  ),
                 ),
+
+                Center(
+                  child: AnimatedSwitcher(
+                    duration: const Duration(milliseconds: 200),
+                    switchInCurve: Curves.easeOut,
+                    switchOutCurve: Curves.easeIn,
+                    child: isLoading
+                        ? SizedBox(
+                            key: const ValueKey('loading'),
+                            width: 22,
+                            height: 22,
+                            child: CircularProgressIndicator(
+                              strokeWidth: 2,
+                              valueColor: AlwaysStoppedAnimation<Color>(
+                                effectiveTextColor,
+                              ),
+                            ),
+                          )
+                        : Row(
+                            key: const ValueKey('content'),
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              if (icon != null) ...[
+                                IconTheme(
+                                  data: IconThemeData(
+                                    color: effectiveTextColor,
+                                    size: 20,
+                                  ),
+                                  child: icon!,
+                                ),
+                                const SizedBox(width: 8),
+                              ],
+                              Text(
+                                label,
+                                style: AppTextStyles.body(context).copyWith(
+                                  color: effectiveTextColor,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          ),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );

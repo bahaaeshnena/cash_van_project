@@ -21,7 +21,7 @@ class SectionDescriptionLogin extends StatelessWidget {
         left: 50,
       ),
       child: Directionality(
-        textDirection: isArabic() ? TextDirection.rtl : TextDirection.ltr,
+        textDirection: isArabicFun() ? TextDirection.rtl : TextDirection.ltr,
         child: Container(
           decoration: BoxDecoration(
             borderRadius: const BorderRadius.all(

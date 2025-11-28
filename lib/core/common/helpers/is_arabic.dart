@@ -2,6 +2,6 @@
 
 import 'package:intl/intl.dart';
 
-bool isArabic() {
+bool isArabicFun() {
   return Intl.getCurrentLocale() == 'ar';
 }

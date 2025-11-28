@@ -333,6 +333,151 @@ class S {
   String get userType {
     return Intl.message('User Type', name: 'userType', desc: '', args: []);
   }
+
+  /// `Cash Van`
+  String get homeViewTitle {
+    return Intl.message('Cash Van', name: 'homeViewTitle', desc: '', args: []);
+  }
+
+  /// `Ready to get today's work done quickly and with less pressure`
+  String get homeViewSubtitle {
+    return Intl.message(
+      'Ready to get today\'s work done quickly and with less pressure',
+      name: 'homeViewSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Today Summary`
+  String get todaySummary {
+    return Intl.message(
+      'Today Summary',
+      name: 'todaySummary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Features`
+  String get features {
+    return Intl.message('Features', name: 'features', desc: '', args: []);
+  }
+
+  /// `Today's Visits`
+  String get todaysVisits {
+    return Intl.message(
+      'Today\'s Visits',
+      name: 'todaysVisits',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Today's Invoices`
+  String get todaysBills {
+    return Intl.message(
+      'Today\'s Invoices',
+      name: 'todaysBills',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My cash today`
+  String get myCashToday {
+    return Intl.message(
+      'My cash today',
+      name: 'myCashToday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Receipts`
+  String get receipts {
+    return Intl.message('Receipts', name: 'receipts', desc: '', args: []);
+  }
+
+  /// `Sales Returns`
+  String get saleReturns {
+    return Intl.message(
+      'Sales Returns',
+      name: 'saleReturns',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To Open`
+  String get toOpen {
+    return Intl.message('To Open', name: 'toOpen', desc: '', args: []);
+  }
+
+  /// `Account Details`
+  String get accountDetailsTitle {
+    return Intl.message(
+      'Account Details',
+      name: 'accountDetailsTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your basic user information`
+  String get accountDetailsSubTitle {
+    return Intl.message(
+      'Your basic user information',
+      name: 'accountDetailsSubTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get name {
+    return Intl.message('Name', name: 'name', desc: '', args: []);
+  }
+
+  /// `User No`
+  String get userNo {
+    return Intl.message('User No', name: 'userNo', desc: '', args: []);
+  }
+
+  /// `Quick Overview`
+  String get quickOverviewTitle {
+    return Intl.message(
+      'Quick Overview',
+      name: 'quickOverviewTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cards overview`
+  String get quickOverviewSubtitle {
+    return Intl.message(
+      'Cards overview',
+      name: 'quickOverviewSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tip: Tap any value to copy it.`
+  String get tapToCopy {
+    return Intl.message(
+      'Tip: Tap any value to copy it.',
+      name: 'tapToCopy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Copied`
+  String get Copied {
+    return Intl.message('Copied', name: 'Copied', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

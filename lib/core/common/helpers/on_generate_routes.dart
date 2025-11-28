@@ -2,6 +2,7 @@ import 'package:cach_van/features/auth/presentation/login_view.dart';
 import 'package:cach_van/features/home/presentation/home_view.dart';
 import 'package:cach_van/features/home/presentation/main_view.dart';
 import 'package:cach_van/features/on_boarding/presentation/on_boarding_view.dart';
+import 'package:cach_van/features/profile/presentation/profile_view.dart';
 import 'package:flutter/material.dart';
 
 Route<dynamic> onGenerateRoutes(RouteSettings settings) {
@@ -21,6 +22,10 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
     case MainView.routeName:
       return MaterialPageRoute(
         builder: (_) => const MainView(),
+      );
+    case ProfileView.routeName:
+      return MaterialPageRoute(
+        builder: (_) => const ProfileView(),
       );
     default:
       return MaterialPageRoute(

@@ -22,7 +22,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Copied": MessageLookupByLibrary.simpleMessage("نسخ"),
     "account": MessageLookupByLibrary.simpleMessage("حساب"),
+    "accountDetailsSubTitle": MessageLookupByLibrary.simpleMessage(
+      "معلومات المستخدم الاساسية",
+    ),
+    "accountDetailsTitle": MessageLookupByLibrary.simpleMessage(
+      "تفاصيل الحساب",
+    ),
     "appBarSubtitle": MessageLookupByLibrary.simpleMessage(
       "مراقبة العمليات اليومية",
     ),
@@ -39,8 +46,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "emailIsRequired": MessageLookupByLibrary.simpleMessage(
       "البريد الإلكتروني مطلوب",
     ),
+    "features": MessageLookupByLibrary.simpleMessage("الميزات"),
     "getStarted": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
     "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+    "homeViewSubtitle": MessageLookupByLibrary.simpleMessage(
+      "مستعد لإنجاز عمل اليوم بسرعة وبضغط أقل",
+    ),
+    "homeViewTitle": MessageLookupByLibrary.simpleMessage("متابعة السيارات"),
     "invalidEmailAddress": MessageLookupByLibrary.simpleMessage(
       "عنوان البريد الإلكتروني غير صالح",
     ),
@@ -57,6 +69,8 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "loginWelcomeBack": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك"),
     "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
+    "myCashToday": MessageLookupByLibrary.simpleMessage("نقود اليوم"),
+    "name": MessageLookupByLibrary.simpleMessage("الاسم"),
     "onBoardingSubtitle1": MessageLookupByLibrary.simpleMessage(
       "نظّم زياراتك، واعرف العملاء القادمين، وتابع تحصيلاتك خطوة بخطوة بدون أوراق أو فوضى.",
     ),
@@ -82,9 +96,23 @@ class MessageLookup extends MessageLookupByLibrary {
     "preferences": MessageLookupByLibrary.simpleMessage("التفضيلات"),
     "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
     "profileTitle": MessageLookupByLibrary.simpleMessage("معلومات شخصية"),
+    "quickOverviewSubtitle": MessageLookupByLibrary.simpleMessage(
+      "ملخص البطاقات",
+    ),
+    "quickOverviewTitle": MessageLookupByLibrary.simpleMessage("ملخص سريع"),
+    "receipts": MessageLookupByLibrary.simpleMessage("سندات القبض"),
+    "saleReturns": MessageLookupByLibrary.simpleMessage("مرتجعات المبيعات"),
     "settings": MessageLookupByLibrary.simpleMessage("اعدادات النظام"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("تكوين التطبيق"),
     "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+    "tapToCopy": MessageLookupByLibrary.simpleMessage(
+      "معلومة: اضغط على قيمة لنسخها",
+    ),
+    "toOpen": MessageLookupByLibrary.simpleMessage("فتح"),
+    "todaySummary": MessageLookupByLibrary.simpleMessage("ملخص اليوم"),
+    "todaysBills": MessageLookupByLibrary.simpleMessage("فواتير اليوم"),
+    "todaysVisits": MessageLookupByLibrary.simpleMessage("زيارات اليوم"),
+    "userNo": MessageLookupByLibrary.simpleMessage("رقم المستخدم"),
     "userType": MessageLookupByLibrary.simpleMessage("نوع المستخدم"),
     "username": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
   };

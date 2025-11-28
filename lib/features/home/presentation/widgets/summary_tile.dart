@@ -15,7 +15,7 @@ class SummaryTile extends StatelessWidget {
     required this.color1,
     required this.color2,
     this.suffix,
-    this.onTap, // اختياري (ما بكسر الاستدعاءات الحالية)
+    this.onTap,
   });
 
   final String title;
@@ -29,19 +29,11 @@ class SummaryTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = isDarkFun(context);
-
     final border = dark ? Colors.white.withOpacity(0.16) : Colors.black.withOpacity(0.08);
-
     final surface = dark
         ? const Color(0xFF0F1B33).withOpacity(0.55)
         : Colors.white.withOpacity(0.82);
     final surface2 = dark ? Colors.white.withOpacity(0.06) : Colors.white.withOpacity(0.92);
-
-    final labelColor = dark
-        ? AppColors.darkLabelText.withOpacity(0.92)
-        : AppColors.lightLabelText.withOpacity(0.92);
-
-    final titleColor = dark ? AppColors.darkTitleText : AppColors.lightTitleText;
 
     return Material(
       color: Colors.transparent,
@@ -61,13 +53,11 @@ class SummaryTile extends StatelessWidget {
               end: Alignment.bottomRight,
             ),
             boxShadow: [
-              // غلو ملون خفيف
               BoxShadow(
                 color: color1.withOpacity(dark ? 0.18 : 0.14),
                 blurRadius: 22,
                 offset: const Offset(0, 12),
               ),
-              // ظل طبيعي
               BoxShadow(
                 color: Colors.black.withOpacity(dark ? 0.24 : 0.10),
                 blurRadius: 18,
@@ -138,7 +128,6 @@ class SummaryTile extends StatelessWidget {
                                     context,
                                     fontSize: 13,
                                     fontWeight: FontWeight.w900,
-                                    color: labelColor,
                                   ),
                                 ),
                                 const SizedBox(height: 6),
@@ -154,7 +143,6 @@ class SummaryTile extends StatelessWidget {
                                           context,
                                           fontSize: 20,
                                           fontWeight: FontWeight.w900,
-                                          color: titleColor,
                                         ),
                                       ),
                                     ),
@@ -168,7 +156,6 @@ class SummaryTile extends StatelessWidget {
                                             context,
                                             fontSize: 12.5,
                                             fontWeight: FontWeight.w900,
-                                            color: labelColor,
                                           ),
                                         ),
                                       ),

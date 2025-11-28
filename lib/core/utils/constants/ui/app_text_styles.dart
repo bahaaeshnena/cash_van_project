@@ -8,7 +8,7 @@ class AppTextStyles {
   static const String tajawal = 'Tajawal'; // Arabic font
 
   static String _fontFamily(BuildContext context) {
-    if (isArabic()) {
+    if (isArabicFun()) {
       return tajawal;
     }
     return inter;

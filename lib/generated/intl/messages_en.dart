@@ -22,7 +22,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Copied": MessageLookupByLibrary.simpleMessage("Copied"),
     "account": MessageLookupByLibrary.simpleMessage("Account"),
+    "accountDetailsSubTitle": MessageLookupByLibrary.simpleMessage(
+      "Your basic user information",
+    ),
+    "accountDetailsTitle": MessageLookupByLibrary.simpleMessage(
+      "Account Details",
+    ),
     "appBarSubtitle": MessageLookupByLibrary.simpleMessage(
       "Daily operations overview",
     ),
@@ -39,8 +46,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "emailIsRequired": MessageLookupByLibrary.simpleMessage(
       "Email is required",
     ),
+    "features": MessageLookupByLibrary.simpleMessage("Features"),
     "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
     "home": MessageLookupByLibrary.simpleMessage("Home"),
+    "homeViewSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Ready to get today\'s work done quickly and with less pressure",
+    ),
+    "homeViewTitle": MessageLookupByLibrary.simpleMessage("Cash Van"),
     "invalidEmailAddress": MessageLookupByLibrary.simpleMessage(
       "Invalid email address",
     ),
@@ -57,6 +69,8 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "loginWelcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back"),
     "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+    "myCashToday": MessageLookupByLibrary.simpleMessage("My cash today"),
+    "name": MessageLookupByLibrary.simpleMessage("Name"),
     "onBoardingSubtitle1": MessageLookupByLibrary.simpleMessage(
       "Organize your visits, see incoming customers, and track your collections step by step without paper or clutter.",
     ),
@@ -84,11 +98,27 @@ class MessageLookup extends MessageLookupByLibrary {
     "profileTitle": MessageLookupByLibrary.simpleMessage(
       "Personal information",
     ),
+    "quickOverviewSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Cards overview",
+    ),
+    "quickOverviewTitle": MessageLookupByLibrary.simpleMessage(
+      "Quick Overview",
+    ),
+    "receipts": MessageLookupByLibrary.simpleMessage("Receipts"),
+    "saleReturns": MessageLookupByLibrary.simpleMessage("Sales Returns"),
     "settings": MessageLookupByLibrary.simpleMessage("System Settings"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage(
       "Application configuration",
     ),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+    "tapToCopy": MessageLookupByLibrary.simpleMessage(
+      "Tip: Tap any value to copy it.",
+    ),
+    "toOpen": MessageLookupByLibrary.simpleMessage("To Open"),
+    "todaySummary": MessageLookupByLibrary.simpleMessage("Today Summary"),
+    "todaysBills": MessageLookupByLibrary.simpleMessage("Today\'s Invoices"),
+    "todaysVisits": MessageLookupByLibrary.simpleMessage("Today\'s Visits"),
+    "userNo": MessageLookupByLibrary.simpleMessage("User No"),
     "userType": MessageLookupByLibrary.simpleMessage("User Type"),
     "username": MessageLookupByLibrary.simpleMessage("Username"),
   };

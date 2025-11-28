@@ -1,5 +1,8 @@
 // ignore_for_file: deprecated_member_use
+import 'package:cach_van/core/common/helpers/is_arabic.dart';
+import 'package:cach_van/core/common/helpers/is_dark.dart';
 import 'package:cach_van/features/home/domain/feature_item_entity.dart';
+import 'package:cach_van/features/home/presentation/widgets/open_chip.dart';
 import 'package:cach_van/features/home/presentation/widgets/summary_mini_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:cach_van/core/utils/constants/ui/app_colors.dart';
@@ -9,14 +12,15 @@ class FeatureCard extends StatelessWidget {
   const FeatureCard({
     super.key,
     required this.item,
-    required this.dark,
   });
 
   final FeatureItemEntity item;
-  final bool dark;
 
   @override
   Widget build(BuildContext context) {
+    final dark = isDarkFun(context);
+    final isArabic = isArabicFun();
+
     final tileFill = dark ? Colors.white.withOpacity(0.08) : Colors.white.withOpacity(0.88);
     final tileBorder = dark ? Colors.white.withOpacity(0.14) : Colors.black.withOpacity(0.06);
     final tileShadow = dark ? Colors.black.withOpacity(0.22) : Colors.black.withOpacity(0.10);
@@ -75,12 +79,12 @@ class FeatureCard extends StatelessWidget {
                       ),
                     ),
                     const Spacer(),
-                    _OpenChip(dark: dark, borderColor: tileBorder),
+                    OpenChip(borderColor: tileBorder),
                   ],
                 ),
                 const SizedBox(height: 12),
                 Text(
-                  item.title,
+                  isArabic ? item.titleAr : item.titleEn,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: AppTextStyles.title(
@@ -92,7 +96,7 @@ class FeatureCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  item.subtitle,
+                  isArabic ? item.subtitleAr : item.subtitleEn,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   style: AppTextStyles.body(
@@ -111,45 +115,6 @@ class FeatureCard extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
-  }
-}
-
-class _OpenChip extends StatelessWidget {
-  const _OpenChip({required this.dark, required this.borderColor});
-
-  final bool dark;
-  final Color borderColor;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
-      decoration: BoxDecoration(
-        color: dark ? Colors.white.withOpacity(0.10) : Colors.black.withOpacity(0.05),
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: borderColor),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(
-            'فتح',
-            style: AppTextStyles.label(
-              context,
-              fontSize: 13,
-              fontWeight: FontWeight.w900,
-              color: dark ? Colors.white : AppColors.lightTitleText,
-            ),
-          ),
-          const SizedBox(width: 6),
-          Icon(
-            Icons.arrow_forward_rounded,
-            size: 18,
-            color: dark ? Colors.white.withOpacity(0.95) : AppColors.lightTitleText,
-          ),
-        ],
       ),
     );
   }

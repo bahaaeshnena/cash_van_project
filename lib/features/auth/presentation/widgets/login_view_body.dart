@@ -51,7 +51,7 @@ class LoginViewBody extends StatelessWidget {
                       Expanded(
                         flex: 5,
                         child: Directionality(
-                          textDirection: isArabic() ? TextDirection.rtl : TextDirection.ltr,
+                          textDirection: isArabicFun() ? TextDirection.rtl : TextDirection.ltr,
                           child: Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 32.0),
                             child: Column(

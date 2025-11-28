@@ -6,11 +6,9 @@ class HomeFeaturesSection extends StatelessWidget {
   const HomeFeaturesSection({
     super.key,
     required this.items,
-    required this.dark,
   });
 
   final List<FeatureItemEntity> items;
-  final bool dark;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +32,6 @@ class HomeFeaturesSection extends StatelessWidget {
           itemBuilder: (context, index) {
             return FeatureCard(
               item: items[index],
-              dark: dark,
             );
           },
         );
