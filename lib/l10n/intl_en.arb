@@ -105,5 +105,9 @@
   "tapToCopy": "Tip: Tap any value to copy it.",
   "@tapToCopy": {},
   "Copied": "Copied",
-  "@Copied": {}
+  "@Copied": {},
+  "attendance": "Attendance",
+  "@attendance": {},
+  "attendanceTitle": "Open / Close Attendance",
+  "@attendanceTitle": {}
 }

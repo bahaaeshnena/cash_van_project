@@ -34,6 +34,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "مراقبة العمليات اليومية",
     ),
     "appBarTitle": MessageLookupByLibrary.simpleMessage("متابعة السيارات"),
+    "attendance": MessageLookupByLibrary.simpleMessage("الدوام"),
+    "attendanceTitle": MessageLookupByLibrary.simpleMessage(
+      "فتح / اغلاق الدوام",
+    ),
     "changeLanguage": MessageLookupByLibrary.simpleMessage("تغيير اللغة"),
     "changeLanguageTitle": MessageLookupByLibrary.simpleMessage(
       "تغيير لغة التطبيق",

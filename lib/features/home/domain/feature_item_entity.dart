@@ -1,4 +1,5 @@
 import 'package:cach_van/core/utils/constants/ui/app_colors.dart';
+import 'package:cach_van/features/attendance/presentation/attendance_view.dart';
 import 'package:flutter/material.dart';
 
 class FeatureItemEntity {
@@ -9,7 +10,7 @@ class FeatureItemEntity {
   final IconData icon;
   final Color color1;
   final Color color2;
-  final VoidCallback? onTap;
+  final void Function(BuildContext context)? onTap;
 
   const FeatureItemEntity({
     required this.titleAr,
@@ -32,7 +33,9 @@ List<FeatureItemEntity> get features => [
     icon: Icons.work_rounded,
     color1: AppColors.neonMint,
     color2: AppColors.neonTeal,
-    onTap: () {},
+    onTap: (context) {
+      Navigator.pushNamed(context, AttendanceView.routeName);
+    },
   ),
   FeatureItemEntity(
     titleAr: 'الفواتير',
@@ -42,7 +45,7 @@ List<FeatureItemEntity> get features => [
     icon: Icons.receipt_long_rounded,
     color1: AppColors.neonBlue,
     color2: AppColors.neonIndigo,
-    onTap: () {},
+    onTap: (context) {},
   ),
   FeatureItemEntity(
     titleAr: 'سند القبض',
@@ -52,7 +55,7 @@ List<FeatureItemEntity> get features => [
     icon: Icons.request_quote_rounded,
     color1: AppColors.neonAmber,
     color2: AppColors.neonOrange,
-    onTap: () {},
+    onTap: (context) {},
   ),
   FeatureItemEntity(
     titleAr: 'المرتجعات',
@@ -62,7 +65,7 @@ List<FeatureItemEntity> get features => [
     icon: Icons.assignment_return_rounded,
     color1: AppColors.neonPurple,
     color2: AppColors.neonViolet,
-    onTap: () {},
+    onTap: (context) {},
   ),
   FeatureItemEntity(
     titleAr: 'المواد',
@@ -72,7 +75,7 @@ List<FeatureItemEntity> get features => [
     icon: Icons.inventory_2_rounded,
     color1: AppColors.neonGreen,
     color2: AppColors.neonLime,
-    onTap: () {},
+    onTap: (context) {},
   ),
   FeatureItemEntity(
     titleAr: 'الكميات المتوفرة',
@@ -82,7 +85,7 @@ List<FeatureItemEntity> get features => [
     icon: Icons.warehouse_rounded,
     color1: AppColors.neonYellow,
     color2: AppColors.neonAmber,
-    onTap: () {},
+    onTap: (context) {},
   ),
   FeatureItemEntity(
     titleAr: 'الزيارات',
@@ -92,7 +95,7 @@ List<FeatureItemEntity> get features => [
     icon: Icons.map_rounded,
     color1: AppColors.neonCyan,
     color2: AppColors.neonSky,
-    onTap: () {},
+    onTap: (context) {},
   ),
   FeatureItemEntity(
     titleAr: 'تقرير الزيارات',
@@ -102,7 +105,7 @@ List<FeatureItemEntity> get features => [
     icon: Icons.bar_chart_sharp,
     color1: AppColors.neonMagenta,
     color2: AppColors.neonPink,
-    onTap: () {},
+    onTap: (context) {},
   ),
   FeatureItemEntity(
     titleAr: "بطاقة العميل",
@@ -112,6 +115,6 @@ List<FeatureItemEntity> get features => [
     icon: Icons.person_rounded,
     color1: AppColors.neonBlue,
     color2: AppColors.neonCyan,
-    onTap: () {},
+    onTap: (context) {},
   ),
 ];

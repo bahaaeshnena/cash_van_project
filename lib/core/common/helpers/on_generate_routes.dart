@@ -1,3 +1,4 @@
+import 'package:cach_van/features/attendance/presentation/attendance_view.dart';
 import 'package:cach_van/features/auth/presentation/login_view.dart';
 import 'package:cach_van/features/home/presentation/home_view.dart';
 import 'package:cach_van/features/home/presentation/main_view.dart';
@@ -26,6 +27,10 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
     case ProfileView.routeName:
       return MaterialPageRoute(
         builder: (_) => const ProfileView(),
+      );
+    case AttendanceView.routeName:
+      return MaterialPageRoute(
+        builder: (_) => const AttendanceView(),
       );
     default:
       return MaterialPageRoute(

@@ -478,6 +478,21 @@ class S {
   String get Copied {
     return Intl.message('Copied', name: 'Copied', desc: '', args: []);
   }
+
+  /// `Attendance`
+  String get attendance {
+    return Intl.message('Attendance', name: 'attendance', desc: '', args: []);
+  }
+
+  /// `Open / Close Attendance`
+  String get attendanceTitle {
+    return Intl.message(
+      'Open / Close Attendance',
+      name: 'attendanceTitle',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

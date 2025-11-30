@@ -105,5 +105,9 @@
   "tapToCopy": "معلومة: اضغط على قيمة لنسخها",
   "@tapToCopy": {},
   "Copied": "نسخ",
-  "@Copied": {}
+  "@Copied": {},
+  "attendance": "الدوام",
+  "@attendance": {},
+  "attendanceTitle": "فتح / اغلاق الدوام",
+  "@attendanceTitle": {}
 }

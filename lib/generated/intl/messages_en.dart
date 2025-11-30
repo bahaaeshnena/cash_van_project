@@ -34,6 +34,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "Daily operations overview",
     ),
     "appBarTitle": MessageLookupByLibrary.simpleMessage("Cash Van"),
+    "attendance": MessageLookupByLibrary.simpleMessage("Attendance"),
+    "attendanceTitle": MessageLookupByLibrary.simpleMessage(
+      "Open / Close Attendance",
+    ),
     "changeLanguage": MessageLookupByLibrary.simpleMessage("Change Language"),
     "changeLanguageTitle": MessageLookupByLibrary.simpleMessage(
       "Switch app language",

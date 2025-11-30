@@ -31,7 +31,7 @@ class FeatureCard extends StatelessWidget {
       borderRadius: BorderRadius.circular(24),
       child: InkWell(
         borderRadius: BorderRadius.circular(24),
-        onTap: item.onTap,
+        onTap: () => item.onTap?.call(context),
         child: Container(
           padding: const EdgeInsets.all(1.6),
           decoration: BoxDecoration(
