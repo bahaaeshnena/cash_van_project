@@ -83,7 +83,6 @@ class CustomElevatedButton extends StatelessWidget {
             onPressed: isLoading ? null : onPressed,
             style:
                 ElevatedButton.styleFrom(
-                  // خليها شفافة عشان الـ DecoratedBox هو اللي يرسم الخلفية
                   backgroundColor: Colors.transparent,
                   shadowColor: Colors.transparent,
                   foregroundColor: effectiveTextColor,
