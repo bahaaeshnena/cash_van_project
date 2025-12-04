@@ -46,10 +46,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "changeThemeTitle": MessageLookupByLibrary.simpleMessage(
       "Light / Dark mode",
     ),
+    "completedVisitsToday": MessageLookupByLibrary.simpleMessage(
+      "Completed Visits Today",
+    ),
+    "currentLocation": MessageLookupByLibrary.simpleMessage("Current Location"),
+    "date": MessageLookupByLibrary.simpleMessage("Date"),
+    "day": MessageLookupByLibrary.simpleMessage("Day"),
+    "days": MessageLookupByLibrary.simpleMessage("Days"),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
     "emailIsRequired": MessageLookupByLibrary.simpleMessage(
       "Email is required",
     ),
+    "endAttendance": MessageLookupByLibrary.simpleMessage("End Attendance"),
     "features": MessageLookupByLibrary.simpleMessage("Features"),
     "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
     "home": MessageLookupByLibrary.simpleMessage("Home"),
@@ -61,6 +69,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Invalid email address",
     ),
     "isRequired": MessageLookupByLibrary.simpleMessage("is required"),
+    "last10Days": MessageLookupByLibrary.simpleMessage("Last 10 Days"),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
     "loginDescriptionLogin": MessageLookupByLibrary.simpleMessage(
       "All your clients, prices, offers, and discounts are right there on one clear and organized screen.",
@@ -73,8 +82,14 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "loginWelcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back"),
     "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+    "month": MessageLookupByLibrary.simpleMessage("Month"),
+    "months": MessageLookupByLibrary.simpleMessage("Months"),
     "myCashToday": MessageLookupByLibrary.simpleMessage("My cash today"),
     "name": MessageLookupByLibrary.simpleMessage("Name"),
+    "notes": MessageLookupByLibrary.simpleMessage("Notes"),
+    "notesHint": MessageLookupByLibrary.simpleMessage(
+      "Write a note if you have one...",
+    ),
     "onBoardingSubtitle1": MessageLookupByLibrary.simpleMessage(
       "Organize your visits, see incoming customers, and track your collections step by step without paper or clutter.",
     ),
@@ -97,7 +112,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwordIsRequired": MessageLookupByLibrary.simpleMessage(
       "Password is required",
     ),
+    "percentageOfCompletedVisits": MessageLookupByLibrary.simpleMessage(
+      "Percentage of Completed Visits",
+    ),
     "preferences": MessageLookupByLibrary.simpleMessage("Preferences"),
+    "procedures": MessageLookupByLibrary.simpleMessage("Procedures"),
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "profileTitle": MessageLookupByLibrary.simpleMessage(
       "Personal information",
@@ -109,15 +128,20 @@ class MessageLookup extends MessageLookupByLibrary {
       "Quick Overview",
     ),
     "receipts": MessageLookupByLibrary.simpleMessage("Receipts"),
+    "remainingVisitsToday": MessageLookupByLibrary.simpleMessage(
+      "Remaining Visits Today",
+    ),
     "saleReturns": MessageLookupByLibrary.simpleMessage("Sales Returns"),
     "settings": MessageLookupByLibrary.simpleMessage("System Settings"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage(
       "Application configuration",
     ),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+    "startAttendance": MessageLookupByLibrary.simpleMessage("Start Attendance"),
     "tapToCopy": MessageLookupByLibrary.simpleMessage(
       "Tip: Tap any value to copy it.",
     ),
+    "time": MessageLookupByLibrary.simpleMessage("Time"),
     "toOpen": MessageLookupByLibrary.simpleMessage("To Open"),
     "todaySummary": MessageLookupByLibrary.simpleMessage("Today Summary"),
     "todaysBills": MessageLookupByLibrary.simpleMessage("Today\'s Invoices"),
@@ -125,5 +149,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userNo": MessageLookupByLibrary.simpleMessage("User No"),
     "userType": MessageLookupByLibrary.simpleMessage("User Type"),
     "username": MessageLookupByLibrary.simpleMessage("Username"),
+    "year": MessageLookupByLibrary.simpleMessage("Year"),
+    "years": MessageLookupByLibrary.simpleMessage("Years"),
   };
 }

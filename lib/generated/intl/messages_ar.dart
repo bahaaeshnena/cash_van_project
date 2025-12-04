@@ -46,10 +46,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "changeThemeTitle": MessageLookupByLibrary.simpleMessage(
       "الوضع الداكن / الفاتح",
     ),
+    "completedVisitsToday": MessageLookupByLibrary.simpleMessage(
+      "الزيارات المكتملة اليوم",
+    ),
+    "currentLocation": MessageLookupByLibrary.simpleMessage("الموقع الحالي"),
+    "date": MessageLookupByLibrary.simpleMessage("التاريخ"),
+    "day": MessageLookupByLibrary.simpleMessage("يوم"),
+    "days": MessageLookupByLibrary.simpleMessage("أيام"),
     "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
     "emailIsRequired": MessageLookupByLibrary.simpleMessage(
       "البريد الإلكتروني مطلوب",
     ),
+    "endAttendance": MessageLookupByLibrary.simpleMessage("نهاية الدوام"),
     "features": MessageLookupByLibrary.simpleMessage("الميزات"),
     "getStarted": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
     "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
@@ -61,6 +69,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "عنوان البريد الإلكتروني غير صالح",
     ),
     "isRequired": MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
+    "last10Days": MessageLookupByLibrary.simpleMessage("اخر 10 يوم"),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "loginDescriptionLogin": MessageLookupByLibrary.simpleMessage(
       "كل عملائك، الأسعار، العروض والخصومات أمامك في شاشة واحدة واضحة ومنظمة.",
@@ -73,8 +82,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "loginWelcomeBack": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك"),
     "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
+    "month": MessageLookupByLibrary.simpleMessage("شهر"),
+    "months": MessageLookupByLibrary.simpleMessage("شهور"),
     "myCashToday": MessageLookupByLibrary.simpleMessage("نقود اليوم"),
     "name": MessageLookupByLibrary.simpleMessage("الاسم"),
+    "notes": MessageLookupByLibrary.simpleMessage("ملاحظات"),
+    "notesHint": MessageLookupByLibrary.simpleMessage("اكتب ملاحظة إن وجدت..."),
     "onBoardingSubtitle1": MessageLookupByLibrary.simpleMessage(
       "نظّم زياراتك، واعرف العملاء القادمين، وتابع تحصيلاتك خطوة بخطوة بدون أوراق أو فوضى.",
     ),
@@ -97,7 +110,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwordIsRequired": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور مطلوبة",
     ),
+    "percentageOfCompletedVisits": MessageLookupByLibrary.simpleMessage(
+      "نسبة الزيارات المكتملة",
+    ),
     "preferences": MessageLookupByLibrary.simpleMessage("التفضيلات"),
+    "procedures": MessageLookupByLibrary.simpleMessage("الإجراءات"),
     "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
     "profileTitle": MessageLookupByLibrary.simpleMessage("معلومات شخصية"),
     "quickOverviewSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -105,13 +122,18 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "quickOverviewTitle": MessageLookupByLibrary.simpleMessage("ملخص سريع"),
     "receipts": MessageLookupByLibrary.simpleMessage("سندات القبض"),
+    "remainingVisitsToday": MessageLookupByLibrary.simpleMessage(
+      "الزيارات المتبقية اليوم",
+    ),
     "saleReturns": MessageLookupByLibrary.simpleMessage("مرتجعات المبيعات"),
     "settings": MessageLookupByLibrary.simpleMessage("اعدادات النظام"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("تكوين التطبيق"),
     "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+    "startAttendance": MessageLookupByLibrary.simpleMessage("بدء الدوام"),
     "tapToCopy": MessageLookupByLibrary.simpleMessage(
       "معلومة: اضغط على قيمة لنسخها",
     ),
+    "time": MessageLookupByLibrary.simpleMessage("الوقت"),
     "toOpen": MessageLookupByLibrary.simpleMessage("فتح"),
     "todaySummary": MessageLookupByLibrary.simpleMessage("ملخص اليوم"),
     "todaysBills": MessageLookupByLibrary.simpleMessage("فواتير اليوم"),
@@ -119,5 +141,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userNo": MessageLookupByLibrary.simpleMessage("رقم المستخدم"),
     "userType": MessageLookupByLibrary.simpleMessage("نوع المستخدم"),
     "username": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
+    "year": MessageLookupByLibrary.simpleMessage("سنة"),
+    "years": MessageLookupByLibrary.simpleMessage("سنوات"),
   };
 }

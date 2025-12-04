@@ -374,6 +374,36 @@ class S {
     );
   }
 
+  /// `Completed Visits Today`
+  String get completedVisitsToday {
+    return Intl.message(
+      'Completed Visits Today',
+      name: 'completedVisitsToday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remaining Visits Today`
+  String get remainingVisitsToday {
+    return Intl.message(
+      'Remaining Visits Today',
+      name: 'remainingVisitsToday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Percentage of Completed Visits`
+  String get percentageOfCompletedVisits {
+    return Intl.message(
+      'Percentage of Completed Visits',
+      name: 'percentageOfCompletedVisits',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Today's Invoices`
   String get todaysBills {
     return Intl.message(
@@ -492,6 +522,101 @@ class S {
       desc: '',
       args: [],
     );
+  }
+
+  /// `Procedures`
+  String get procedures {
+    return Intl.message('Procedures', name: 'procedures', desc: '', args: []);
+  }
+
+  /// `Notes`
+  String get notes {
+    return Intl.message('Notes', name: 'notes', desc: '', args: []);
+  }
+
+  /// `Write a note if you have one...`
+  String get notesHint {
+    return Intl.message(
+      'Write a note if you have one...',
+      name: 'notesHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start Attendance`
+  String get startAttendance {
+    return Intl.message(
+      'Start Attendance',
+      name: 'startAttendance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `End Attendance`
+  String get endAttendance {
+    return Intl.message(
+      'End Attendance',
+      name: 'endAttendance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Current Location`
+  String get currentLocation {
+    return Intl.message(
+      'Current Location',
+      name: 'currentLocation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Day`
+  String get day {
+    return Intl.message('Day', name: 'day', desc: '', args: []);
+  }
+
+  /// `Month`
+  String get month {
+    return Intl.message('Month', name: 'month', desc: '', args: []);
+  }
+
+  /// `Year`
+  String get year {
+    return Intl.message('Year', name: 'year', desc: '', args: []);
+  }
+
+  /// `Days`
+  String get days {
+    return Intl.message('Days', name: 'days', desc: '', args: []);
+  }
+
+  /// `Months`
+  String get months {
+    return Intl.message('Months', name: 'months', desc: '', args: []);
+  }
+
+  /// `Years`
+  String get years {
+    return Intl.message('Years', name: 'years', desc: '', args: []);
+  }
+
+  /// `Date`
+  String get date {
+    return Intl.message('Date', name: 'date', desc: '', args: []);
+  }
+
+  /// `Time`
+  String get time {
+    return Intl.message('Time', name: 'time', desc: '', args: []);
+  }
+
+  /// `Last 10 Days`
+  String get last10Days {
+    return Intl.message('Last 10 Days', name: 'last10Days', desc: '', args: []);
   }
 }
 

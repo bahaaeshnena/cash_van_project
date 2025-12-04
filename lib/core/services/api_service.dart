@@ -3,7 +3,8 @@ import 'package:dio/dio.dart';
 import 'package:cach_van/core/utils/constants/api_end_points.dart';
 
 class ApiService {
-  final _baseUrl = 'http://192.168.1.15:8020/api/';
+  final _baseUrl = 'http://10.0.1.148:8020/api/';
+  // final _baseUrl = 'http://192.168.1.15:8020/api/';
   final Dio _dio;
 
   ApiService(this._dio) {
